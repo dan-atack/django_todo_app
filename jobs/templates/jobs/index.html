@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{% static 'jobs/styles.css' %}" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todos.com</title>
+  </head>
+  <body>
+    <div class="banner">
+      <h1>GIT'ER DONe!!!</h1>
+    </div>
+    <div class="entry-field">
+      <input type="text" class="add-item" placeholder="to do..." />
+      <button class="add-item submit">Add To List</button>
+    </div>
+    <div class="main">
+      <ul class="todos">
+        <li>Do this.</li>
+        <li>Don't do that.</li>
+        <li>Can't you read the sign.</li>
+      </ul>
+      <ul class="completed">
+        <li>Get coffee</li>
+        <li>Get coffee</li>
+        <li>Make more coffee</li>
+        <li>Refill coffee</li>
+        <li>Get coffee</li>
+      </ul>
+    </div>
+  </body>
+</html>
