@@ -17,16 +17,11 @@
     </div>
     <div class="main">
       <ul class="todos">
-        <li>Do this.</li>
-        <li>Don't do that.</li>
-        <li>Can't you read the sign.</li>
-      </ul>
-      <ul class="completed">
-        <li>Get coffee</li>
-        <li>Get coffee</li>
-        <li>Make more coffee</li>
-        <li>Refill coffee</li>
-        <li>Get coffee</li>
+        {% for foo in todo_items %} {% if foo.completed %}
+        <li class="completed">{{todolist.item}}</li>
+        {% else %}
+        <li><a href="#">{{foo.item}}</a></li>
+        {% endif %} {% endfor %}
       </ul>
     </div>
   </body>
