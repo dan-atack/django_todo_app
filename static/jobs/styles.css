@@ -1,0 +1,76 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img,
+div,
+a,
+ul,
+ol,
+li,
+input,
+form,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  color: whitesmoke;
+  background-color: navy;
+}
+
+.banner {
+  padding: 1%;
+  margin: 1%;
+}
+.entry-field {
+  margin: 1%;
+  padding: 1%;
+  border: 1px solid black;
+  border-radius: 16px;
+  border: 3px solid rgb(197, 172, 176);
+  height: 64px;
+  position: relative;
+}
+
+.add-item {
+  position: absolute;
+  margin-top: auto;
+  height: 66%;
+  width: 12%;
+  border-radius: 8px;
+}
+
+.submit {
+  left: 14%;
+  width: 8%;
+}
+
+.main {
+  color: rgb(8, 8, 83);
+  margin: 1%;
+  padding: 2%;
+  font-size: 1.6em;
+  background-color: rgb(126, 206, 90);
+  border: 3px solid rgb(197, 172, 176);
+  border-radius: 16px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.purge-button {
+  padding: 8px;
+  height: 64px;
+  width: 128px;
+  border-radius: 8px;
+  color: whitesmoke;
+  background-color: red;
+}

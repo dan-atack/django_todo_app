@@ -12,17 +12,29 @@
       <h1>GIT'ER DONe!!!</h1>
     </div>
     <div class="entry-field">
-      <input type="text" class="add-item" placeholder="to do..." />
-      <button class="add-item submit">Add To List</button>
+      <form action="{% url 'add' %}" method="POST" role="form">
+        {% csrf_token %} {{ form.item }}
+        <button class="add-item submit" type="submit">Add To List</button>
+      </form>
     </div>
     <div class="main">
       <ul class="todos">
-        {% for foo in todo_items %} {% if foo.completed %}
-        <li class="completed">{{todolist.item}}</li>
+        {% for todoItem in todo_items %} {% if todoItem.completed %}
+        <li class="completed">{{todoItem.item}}</li>
         {% else %}
-        <li><a href="#">{{foo.item}}</a></li>
+        <li>
+          <a href="{% url 'completeToDo' todoItem.id %}">{{todoItem.item}}</a>
+        </li>
         {% endif %} {% endfor %}
       </ul>
     </div>
+    <a href="{% url 'deleteCompleted' %}">
+      <button class="purge-button" type="submit">PURGE COMPLETED ITEMS</button>
+    </a>
+    <a href="{% url 'deleteAll' %}">
+      <button class="purge-button" type="submit">
+        DELETE ALL TODO-LIST ITEMS
+      </button>
+    </a>
   </body>
 </html>

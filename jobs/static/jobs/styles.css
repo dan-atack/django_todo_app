@@ -65,3 +65,13 @@ body {
 .completed {
   text-decoration: line-through;
 }
+
+.purge-button {
+  margin-left: 2%;
+  padding: 8px;
+  height: 64px;
+  width: 128px;
+  border-radius: 8px;
+  color: whitesmoke;
+  background-color: red;
+}
